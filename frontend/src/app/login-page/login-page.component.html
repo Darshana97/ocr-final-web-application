@@ -1,0 +1,29 @@
+
+  <app-top-nav [isLogedIn]="false"></app-top-nav>
+
+  <form #login="ngForm" class="login" (submit)='onSubmit(login.value)'>
+    <h1>User Login</h1><br><br>
+    
+    <!-- <input type="email"  placeholder="Enter your e-mail here" class="email"><br><br> -->
+    <mat-form-field appearance="outline" class="email" >
+      <mat-label>Enter your e-mail</mat-label>
+      <input matInput placeholder="E-mail" ngModel name='email'>   
+    </mat-form-field><br><br><br><br>
+
+    <mat-form-field class="con">
+      <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" ngModel name="password"><br>
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field><br><br><br><br>
+    <button mat-raised-button color="accent" class="btn">Login</button><br><br><br>
+
+
+    <!-- <div *ngFor="let x of users">
+      <h1>Id : {{x.id}} </h1>
+      <h1>Email : {{x.email}} </h1>
+      <h1>Password : {{x.password}} </h1>
+      <br>
+    </div> -->
+
+</form>

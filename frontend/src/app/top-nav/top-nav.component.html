@@ -1,0 +1,10 @@
+<mat-toolbar>
+    <h1>Text Recognition Application</h1>
+    <div class="nav">
+        <a *ngIf="isLogedIn" routerLink="/home-page">Home</a>
+        <a *ngIf="isLogedIn" routerLink="/show-result">View Results</a>
+        <a *ngIf="!isLogedIn" routerLink="/register">Register</a>
+        <button mat-button *ngIf="isLogedIn" (click)="onLogOut()">Logout</button>
+        <a *ngIf="!isLogedIn" routerLink="">Login</a>
+    </div>
+</mat-toolbar>

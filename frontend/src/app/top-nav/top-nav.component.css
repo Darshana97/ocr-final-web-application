@@ -1,0 +1,33 @@
+mat-toolbar {
+    background-color: rgb(58, 199, 241);
+    color: white;
+    height: 100px;
+}
+
+mat-toolbar div{
+    width: 100%;
+    
+}
+
+mat-toolbar h1{
+    color: red;
+    text-shadow: 3px 3px 3px black;
+
+}
+
+
+
+mat-toolbar div a, button{
+    /* float: center; */
+    margin-left: 300px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+mat-toolbar div a:hover{
+    color: black;
+    
+    
+}
+

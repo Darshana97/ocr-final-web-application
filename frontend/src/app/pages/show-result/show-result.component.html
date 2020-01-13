@@ -1,0 +1,15 @@
+<app-top-nav [isLogedIn]="true"></app-top-nav>
+
+<div class="con" *ngFor="let result of results">
+    <mat-card class="example-card">
+        <img mat-card-image src="{{result.image_url}}" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+            <p>
+                {{result.img_result}}
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button color="warn" (click)="onDelete(result._id)">Delete</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
